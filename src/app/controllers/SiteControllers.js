@@ -1,9 +1,7 @@
-class SiteControllers
-{
-    home(req,res)
-    {
+class SiteControllers {
+    home(req, res) {
         res.render('home');
     }
 }
 
-module.exports = new SiteControllers;
+module.exports = new SiteControllers();
