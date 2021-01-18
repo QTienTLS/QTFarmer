@@ -1,0 +1,29 @@
+{
+  "name": "qtfarmer",
+  "version": "1.0.0",
+  "description": "Thực tập chuyên ngành 1. website lưu trữ các giống cây trồng lương thực phổ biến tại Việt Nam",
+  "main": "src\\index.js",
+  "scripts": {
+    "watch": "node-sass -w src\\resources\\scss -o src\\public\\css",
+    "start": "nodemon --inspect src\\index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/QTienTLS/QTFarmer.git"
+  },
+  "author": "QTienTLS",
+  "license": "ISC",
+  "bug": {
+    "url": "https://github.com/QTienTLS/QTFarmer.git/issue"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^5.2.0",
+    "nodemon": "^2.0.7"
+  },
+  "devDependencies": {
+    "morgan": "^1.10.0",
+    "node-sass": "^5.0.0"
+  }
+}
