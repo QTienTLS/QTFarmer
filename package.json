@@ -4,7 +4,7 @@
     "description": "Thực tập chuyên ngành 1. website lưu trữ các giống cây trồng lương thực phổ biến tại Việt Nam",
     "main": "src\\index.js",
     "scripts": {
-        "beautiful": "lint-staged",
+        "beautiful": "prettier --single-quote --tab-width 4 --trailing-comma all  --write \"./**/*.{js,json,scss}\" ",
         "watch": "node-sass -w src\\resources\\scss -o src\\public\\css",
         "start": "nodemon --inspect src\\index.js",
         "test": "echo \"Error: no test specified\" && exit 1"
@@ -14,13 +14,17 @@
         "url": "https://github.com/QTienTLS/QTFarmer.git"
     },
     "author": "QTienTLS",
-              "license": "ISC",
-              "bug": {
+    "license": "ISC",
+    "bug": {
         "url": "https://github.com/QTienTLS/QTFarmer.git/issue"
     },
     "lint-staged": {
         "./**/*.{js,json,scss}": "prettier --single-quote --tab-width 4 --trailing-comma all  --write"
-
+    },
+    "husky": {
+        "hook": {
+            "pre-commit": "lint-staged"
+        }
     },
     "dependencies": {
         "express": "^4.17.1",
