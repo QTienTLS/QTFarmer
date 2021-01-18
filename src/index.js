@@ -7,8 +7,7 @@ const port = 3001;
 const route = require('./routes');
 
 app.use(express.static('src\\public'));
-app.engine(
-    'hbs',
+app.engine('hbs',
     handlebars({
         extname: '.hbs',
     }),
