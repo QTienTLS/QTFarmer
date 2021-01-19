@@ -1,8 +1,10 @@
 h1 {
-    color: green;
-}
+  color: green; }
 
 #headermenu {
-    height: 80px;
-    background-color: green;
-}
+  height: 80px;
+  background-color: green; }
+
+.card-crops-item {
+  margin: 50px;
+  width: auto; }

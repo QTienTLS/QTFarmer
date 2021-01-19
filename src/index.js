@@ -5,8 +5,12 @@ const handlebars = require('express-handlebars');
 const app = express();
 const port = 3001;
 const route = require('./routes');
+const db = require('./config/db');
 
-app.use(express.static('src\\public'));
+//connect to database
+db.connect();
+
+app.use(express.static(path.join(__dirname, 'public')));
 app.engine(
     'hbs',
     handlebars({
@@ -20,5 +24,5 @@ app.use(morgan('combined'));
 route(app);
 
 app.listen(port, () => {
-    console.log(`Example app listening at http://localhost:${port}`);
+    console.log(`App listening at http://localhost:${port}`);
 });
