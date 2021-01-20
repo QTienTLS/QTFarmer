@@ -2,10 +2,12 @@
     <div class="row">
         {{#each crops}}
         <div class="col-sm-6 col-lg-4">
-            <div class="card card-crops-item" style="width: auto">
+            <div class="card card-crops-item">
+                <a href="/crops/{{this.slug}}">
                 <img src={{this.image}} class="card-img-top" alt="...">
+                </a>
                 <div class="card-body">
-                    <h5 class="card-title">{{this.type}}</h5>
+                    <h5 class="card-title des-crops">{{this.type}}</h5>
                     <p class="card-text">{{this.description}}</p>
                     <a href="#" class="btn btn-primary">Xem chi tiết</a>
                 </div>

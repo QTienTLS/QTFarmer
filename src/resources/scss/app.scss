@@ -1,11 +1,25 @@
 @import 'variables';
 
 h1 {
-    color: $red-color;
+    color: $main-color;
 }
 #headermenu {
     height: 80px;
-    background-color: green;
+    background-color: $main-color;
+
+    a {
+        color: white;
+    }
+    .dropdown-menu {
+        a:hover {
+            color: green;
+        }
+    }
+}
+.user-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
 }
 .card-crops-item {
     //margin-top: 20px;
