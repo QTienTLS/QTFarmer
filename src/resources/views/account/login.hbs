@@ -1,0 +1,30 @@
+<div class="mt-8">
+    <div class="container border shadow-lg" id="login-container">
+        <form method="POST" action="/account/login">
+            <div class="input-group mx-auto mb-3">
+                <span class="input-group-text" id="basic-addon1">Tên đăng nhập</span>
+                <input type="text" class="form-control" placeholder="Username" aria-label="Username"
+                    aria-describedby="basic-addon1" id="user" name="user">
+            </div>
+            <div class="input-group mx-auto mb-3 ">
+                <span class="input-group-text" id="basic-addon1">Mật khẩu</span>
+                <input type="password" class="form-control" placeholder="Password" aria-label="Username"
+                    aria-describedby="basic-addon1" id="password" name="password">
+            </div>
+
+            <button type="submit" class="btn btn-light rounded-pill btn-dang-nhap">Đăng nhập</button>
+
+            <p id="goi-y-dang-ky">Bạn chưa có tài khoản ? Hãy tiến hành đăng ký</p>
+            <a href="/account/register">
+                <button type="button" class="btn btn-light rounded-pill btn-dang-ky">Đăng ký</button>
+            </a>
+            <p id="goi-y-dang-nhap">Hoặc đăng nhập bằng một trong những phương thức sau</p>
+            <hr>
+            <div class="cac-phuong-thuc-login">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-google-plus"></i></a>
+            </div>
+        </form>
+    </div>
+</div>

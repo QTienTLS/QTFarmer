@@ -1,3 +1,8 @@
+.gioi-thieu {
+  font-size: 20px;
+  font-family: 'Times New Roman', Times, serif;
+  color: black; }
+
 h1 {
   color: #198754; }
 
@@ -15,5 +20,132 @@ h1 {
   border-radius: 50%; }
 
 .card-crops-item {
-  margin: 50px;
-  width: auto; }
+  margin: 30px;
+  width: auto;
+  height: 90%; }
+  .card-crops-item .btn-success {
+    margin-bottom: 8px; }
+  .card-crops-item .card-img-wrap {
+    overflow: hidden;
+    position: relative;
+    display: block; }
+  .card-crops-item .card-img-wrap:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0; }
+  .card-crops-item .card-img-wrap:hover:after {
+    opacity: 1; }
+  .card-crops-item .card-img-wrap:hover img {
+    background-image: url(src);
+    filter: blur(2px);
+    -webkit-filter: blur(2px);
+    transform: scale(1.2);
+    /* Safari & Google Chrome */
+    -webkit-transform: scale(1.2);
+    /* Mozilla Firefox */
+    -moz-transform: scale(1.2);
+    /* Opera */
+    -o-transform: scale(1.2);
+    /* IE 9 */
+    -ms-transform: scale(1.2);
+    cursor: pointer; }
+  .card-crops-item img {
+    width: 100%;
+    transition-duration: 0.5s;
+    /* Safari & Google Chrome */
+    -webkit-transition-duration: 0.5s;
+    /* Mozilla Firefox */
+    -moz-transition-duration: 0.5s;
+    /* Opera */
+    -o-transition-duration: 0.5s;
+    /* IE 9 */
+    -ms-transition-duration: 0.5s; }
+
+.down-footer {
+  background-color: #198754;
+  height: 60px; }
+
+.up-footer {
+  height: 150px;
+  width: 100%;
+  background-color: wheat; }
+
+.sign-in-option .btn {
+  color: #198754;
+  background-color: white;
+  margin-left: 20px; }
+
+.sign-in-option .btn:hover {
+  background-color: green;
+  color: white; }
+
+#login-container {
+  height: 500px;
+  width: 100%;
+  position: relative;
+  margin-top: 50px; }
+  #login-container .input-group {
+    width: 60%;
+    margin-top: 40px; }
+    #login-container .input-group #basic-addon1 {
+      background-color: #198754;
+      color: white;
+      width: 130px; }
+  #login-container .btn-dang-nhap {
+    background-color: #198754;
+    color: white;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    margin-top: 10px; }
+  #login-container .btn-dang-nhap:hover {
+    border-width: 2px;
+    border-color: #198754;
+    background-color: white;
+    color: #198754; }
+  #login-container .btn-dang-ky {
+    background-color: white;
+    color: #198754;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    margin-top: 100px;
+    border-width: 2px;
+    border-color: #198754; }
+  #login-container .btn-dang-ky:hover {
+    background-color: #198754;
+    color: white; }
+  #login-container #goi-y-dang-ky {
+    color: #198754;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    margin-top: 60px;
+    font-size: small; }
+  #login-container #goi-y-dang-nhap {
+    color: #198754;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    margin-top: 150px;
+    font-size: small; }
+  #login-container hr {
+    width: 30%;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    margin-top: 180px; }
+  #login-container .cac-phuong-thuc-login {
+    height: 50px;
+    width: 20%;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    margin-top: 190px; }
+    #login-container .cac-phuong-thuc-login a {
+      color: #198754;
+      font-size: 50px;
+      margin-left: 30px; }

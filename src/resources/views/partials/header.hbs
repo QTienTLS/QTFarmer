@@ -1,5 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark " id="headermenu">
+  
     <div class="container-fluid">
+      <a href="/"><img src="/img/logo.png" class="img-fluid" alt="Responsive image"></a>
       <div class="container">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown"
           aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -7,6 +9,18 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
           <ul class="navbar-nav ms-auto ">
+            <nav class="nav nav-pills nav-justified sign-in-option">
+              <a href="/account/register">
+                <button type="button" class="btn btn-light rounded-pill btn-dang-ky">Đăng ký</button>
+              </a>
+              <a href="/account/login">
+                <button type="button" class="btn btn-light rounded-pill btn-dang-nhap">Đăng nhập</button>
+              </a>
+            </nav>
+            </ul>
+            </div>
+            {{!-- <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+              <ul class="navbar-nav ms-auto ">
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button"
                 data-bs-toggle="dropdown" aria-expanded="false">
@@ -22,7 +36,7 @@
               </ul>
             </li>
           </ul>
-        </div>
+        </div> --}}
       </div>
 </div>
 </nav>
