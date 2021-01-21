@@ -1,11 +1,14 @@
 @import 'variables';
 .gioi-thieu {
     font-size: 20px;
-    font-family: 'Times New Roman', Times, serif;
     color: black;
+}
+p {
+    font-family: 'Times New Roman', Times, serif;
 }
 h1 {
     color: $main-color;
+    font-family: 'Times New Roman', Times, serif;
 }
 #headermenu {
     height: 80px;
@@ -178,4 +181,9 @@ h1 {
             margin-left: 30px;
         }
     }
+}
+.menu-head {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
 }

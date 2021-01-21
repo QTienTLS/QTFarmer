@@ -1,10 +1,13 @@
 .gioi-thieu {
   font-size: 20px;
-  font-family: 'Times New Roman', Times, serif;
   color: black; }
 
+p {
+  font-family: 'Times New Roman', Times, serif; }
+
 h1 {
-  color: #198754; }
+  color: #198754;
+  font-family: 'Times New Roman', Times, serif; }
 
 #headermenu {
   height: 80px;
@@ -149,3 +152,8 @@ h1 {
       color: #198754;
       font-size: 50px;
       margin-left: 30px; }
+
+.menu-head {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0); }

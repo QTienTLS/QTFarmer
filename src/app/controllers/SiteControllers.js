@@ -11,6 +11,9 @@ class SiteControllers {
             )
             .catch(next);
     }
+    about(req, res) {
+        res.render('about');
+    }
 }
 
 module.exports = new SiteControllers();
