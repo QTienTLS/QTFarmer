@@ -1,11 +1,22 @@
-<div class="container" id="side-menu-crop">
+{{!-- <div class="container" id="side-menu-crop">
     {{#each crop}}
-    {{#if @first}}
-    <a href="{{this.slug}}"><button  class="first-crop">{{this.type}}</button></a>
+    {{#if (eq this.slug ../seedtype)}}
+    <a href={{this.slug}} class="first-crop">{{this.type}}</a>
     {{else}}
-    <a href="{{this.slug}}"><button  class="not-first-crop">{{this.type}}</button></a>
+    <a href={{this.slug}} class="not-first-crop">{{this.type}}</a>
     {{/if}}
     {{/each}}
+</div> --}}
+<div class="card" id="side-menu-crop" style="width: 18rem;">
+  <ul class="list-group list-group-flush">
+       {{#each crop}}
+    {{#if (eq this.slug ../seedtype)}}
+  <a href={{this.slug}} class="first-crop"><li class="list-group-item">{{this.type}}</li></a>
+    {{else}}
+<a href={{this.slug}} class="not-first-crop"><li class="list-group-item">{{this.type}}</li></a>
+    {{/if}}
+    {{/each}}
+  </ul>
 </div>
 <div class="container" id="seed-all-page">
     <div class="row">

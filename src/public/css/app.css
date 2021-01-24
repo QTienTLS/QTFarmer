@@ -79,7 +79,7 @@ h1 {
 .sign-in-option .btn {
   color: #198754;
   background-color: white;
-  margin-left: 20px; }
+  margin-left: 7px; }
 
 .sign-in-option .btn:hover {
   background-color: green;
@@ -157,3 +157,65 @@ h1 {
   position: absolute;
   left: 50%;
   transform: translate(-50%, 0); }
+  .menu-head a {
+    margin-inline: 10px; }
+
+#seed-all-page {
+  width: 80%;
+  height: auto;
+  position: relative;
+  top: -300px;
+  left: 15%; }
+
+.card-seed-item {
+  margin: 30px;
+  width: auto;
+  height: 100%; }
+  .card-seed-item .btn-success {
+    margin-bottom: 8px; }
+  .card-seed-item .card-img-wrap {
+    overflow: hidden;
+    position: relative;
+    display: block; }
+  .card-seed-item .card-img-wrap:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0; }
+  .card-seed-item .card-img-wrap:hover:after {
+    opacity: 1; }
+  .card-seed-item .card-img-wrap:hover img {
+    background-image: url(src);
+    filter: blur(2px);
+    -webkit-filter: blur(2px);
+    transform: scale(1.2);
+    /* Safari & Google Chrome */
+    -webkit-transform: scale(1.2);
+    /* Mozilla Firefox */
+    -moz-transform: scale(1.2);
+    /* Opera */
+    -o-transform: scale(1.2);
+    /* IE 9 */
+    -ms-transform: scale(1.2);
+    cursor: pointer; }
+  .card-seed-item img {
+    width: 100%;
+    transition-duration: 0.5s;
+    /* Safari & Google Chrome */
+    -webkit-transition-duration: 0.5s;
+    /* Mozilla Firefox */
+    -moz-transition-duration: 0.5s;
+    /* Opera */
+    -o-transition-duration: 0.5s;
+    /* IE 9 */
+    -ms-transition-duration: 0.5s; }
+
+.col-sm-6 {
+  margin-bottom: 30px; }
+
+#side-menu-crop a {
+  text-decoration: none;
+  display: block;
+  height: 50px; }
