@@ -215,7 +215,23 @@ h1 {
 .col-sm-6 {
   margin-bottom: 30px; }
 
-#side-menu-crop a {
-  text-decoration: none;
-  display: block;
-  height: 50px; }
+#side-menu-crop {
+  margin-top: 50px; }
+  #side-menu-crop a {
+    text-decoration: none;
+    display: block;
+    height: 50px;
+    text-align: center;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #198754; }
+  #side-menu-crop .selected-crop {
+    background-color: #198754;
+    color: white; }
+  #side-menu-crop .not-selected-crop {
+    background-color: white;
+    color: #198754; }
+  #side-menu-crop .not-selected-crop:hover {
+    background-color: #198754;
+    color: white;
+    border-color: white; }

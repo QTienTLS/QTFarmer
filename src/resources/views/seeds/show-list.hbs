@@ -8,27 +8,25 @@
     {{/each}}
 </div> --}}
 <div class="card" id="side-menu-crop" style="width: 18rem;">
-  <ul class="list-group list-group-flush">
        {{#each crop}}
     {{#if (eq this.slug ../seedtype)}}
-  <a href={{this.slug}} class="first-crop"><li class="list-group-item">{{this.type}}</li></a>
+  <a href={{this.slug}} class="selected-crop">{{this.type}}</a>
     {{else}}
-<a href={{this.slug}} class="not-first-crop"><li class="list-group-item">{{this.type}}</li></a>
+<a href={{this.slug}} class="not-selected-crop">{{this.type}}</a>
     {{/if}}
     {{/each}}
-  </ul>
 </div>
 <div class="container" id="seed-all-page">
     <div class="row">
    {{#each seed}}
-     <div class="col-sm-6 col-lg-4 ">
-        <div class="card card-seed-item d-inline-block">
+     <div class="col-sm-6 col-lg-4  ">
+        <div class="card card-seed-item shadow d-inline-block">
             <a href="#" class="card-img-wrap">
              <img src={{this.image}} class="card-img-top" alt="...">
                 </a>
                 <div class="card-body">
                     <h5 class="card-title">{{this.name}}</h5>
-                    <a href="/crops/{{this.slug}}" class="btn btn-success position-absolute bottom-0 start-10" id="nutbam">Xem chi tiết</a>
+                    <a href="#" class="btn btn-success position-absolute bottom-0 start-10" id="nutbam">Xem chi tiết</a>
                 </div>
             </div>
          

@@ -257,9 +257,27 @@ h1 {
     margin-bottom: 30px;
 }
 #side-menu-crop {
+    margin-top: 50px;
     a {
         text-decoration: none;
         display: block;
         height: 50px;
+        text-align: center;
+        border-style: solid;
+        border-width: 2px;
+        border-color: $main-color;
+    }
+    .selected-crop {
+        background-color: $main-color;
+        color: white;
+    }
+    .not-selected-crop {
+        background-color: white;
+        color: $main-color;
+    }
+    .not-selected-crop:hover {
+        background-color: $main-color;
+        color: white;
+        border-color: white;
     }
 }

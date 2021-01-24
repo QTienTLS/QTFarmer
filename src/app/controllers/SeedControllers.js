@@ -11,7 +11,11 @@ class SeedControllers {
             Seed.find({ type: crop[0].slug }, function (err, seed) {
                 if (err) return handleError(err);
                 seed = mutipleMongooseToObject(seed);
-                res.render('seeds/all', { crop, seed });
+                res.render('seeds/show-list', {
+                    crop,
+                    seed,
+                    seedtype: crop[0].slug,
+                });
             });
         });
     }
