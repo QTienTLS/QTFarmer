@@ -70,9 +70,16 @@ h1 {
 .down-footer {
   background-color: #198754;
   height: 60px; }
+  .down-footer p {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: wheat;
+    text-align: center; }
 
 .up-footer {
-  height: 150px;
+  height: 250px;
   width: 100%;
   background-color: wheat; }
 
@@ -276,3 +283,22 @@ h1 {
 .seed-detail p {
   font-family: 'Times New Roman', Times, serif;
   font-size: 18px; }
+
+#footer h3,
+#footer p {
+  color: #198754; }
+
+#footer h2 {
+  color: #198754;
+  font-size: 40px;
+  margin-left: 30px; }
+
+#back-to-top {
+  background-color: #198754;
+  color: white;
+  position: sticky;
+  float: right;
+  bottom: 40px;
+  right: 40px;
+  display: none;
+  border-color: #198754; }

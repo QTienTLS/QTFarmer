@@ -20,10 +20,34 @@
             {{{body}}}
             
         </div>
+        <a id="back-to-top" href="#" class="btn btn-light btn-lg back-to-top rounded-circle" role="button">
+            <i class="fad fa-chevron-up"></i></a>
         {{>footer}}
     </div>
     <!-- jQuery CDN - Slim version (=without AJAX) -->
     <script src="/js/jquery/dist/jquery.slim.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    {{!-- nut scroll to top --}}
+    <script>//Get the button
+        var mybutton = document.getElementById("back-to-top");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "inline-block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
 </body>
 
 </html>

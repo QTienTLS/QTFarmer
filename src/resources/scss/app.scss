@@ -83,9 +83,17 @@ h1 {
 .down-footer {
     background-color: $main-color;
     height: 60px;
+    p {
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: wheat;
+        text-align: center;
+    }
 }
 .up-footer {
-    height: 150px;
+    height: 250px;
     width: 100%;
     background-color: wheat;
 }
@@ -330,4 +338,25 @@ h1 {
         font-family: 'Times New Roman', Times, serif;
         font-size: 18px;
     }
+}
+#footer {
+    h3,
+    p {
+        color: $main-color;
+    }
+    h2 {
+        color: $main-color;
+        font-size: 40px;
+        margin-left: 30px;
+    }
+}
+#back-to-top {
+    background-color: $main-color;
+    color: white;
+    position: sticky;
+    float: right;
+    bottom: 40px;
+    right: 40px;
+    display: none;
+    border-color: $main-color;
 }
