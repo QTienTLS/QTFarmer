@@ -26,13 +26,26 @@ class SeedControllers {
             Seed.find({ type: req.params.slug }, function (err, seed) {
                 if (err) return handleError(err);
                 seed = mutipleMongooseToObject(seed);
-
                 res.render('seeds/show-list', {
                     crop,
                     seed,
                     seedtype: req.params.slug,
                 });
             });
+        });
+    }
+    detail(req, res, next) {
+        Seed.findOne({ _id: req.params.id }, function (err, seed) {
+            if (err) return handleError(err);
+            seed = mongooseToObject(seed);
+            const query = Seed.find({ type: seed.type }).limit(4);
+            query.exec(function (err, same) {
+                if (err) return handleError(err);
+                same = mutipleMongooseToObject(same);
+                res.render('seeds/detail', { seed, same });
+            });
+
+            //res.json(seed);
         });
     }
 }

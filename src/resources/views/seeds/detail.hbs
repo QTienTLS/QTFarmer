@@ -1,0 +1,46 @@
+<div class="mt-4" id="name-seed-detail" style=" //background-color:wheat; height: 100px; font-weight: bold;">
+    <h1>{{seed.name}}</h1>
+</div>
+<div class="seed-detail">
+    <div class="form-image-seed shadow row">
+        <div class="col"> <img src={{seed.image}} class="img-thumbnail  rounded"
+                style="width: auto; height:90%; margin-top: 5px; display: inline-block;" alt="...">
+        </div>
+        <div class="col-8" style="margin-top: 2%; ">
+            <h3 id="source-title"><i class="fal fa-lightbulb-on"></i> Nguồn gốc </h3>
+            <p id="source-detail">{{seed.source}}</p>
+        </div>
+    </div>
+    <div class="form-detail-seed shadow col">
+        <div class="row-5">
+            <h3><i class="fas fa-seedling"></i> Những đặc tính chủ yếu</h3>
+            <p>{{seed.description}}</p>
+        </div>
+        <div class="row-5">
+            <h3><i class="fad fa-hand-holding-seedling"></i> Hướng sử dụng và yêu cầu kỹ thuật</h3>
+            <p>{{seed.tips}}</p>
+        </div>
+    </div>
+</div>
+<div class="mt-4" id="name-seed-detail" style=" //background-color:wheat; height: 100px; font-weight: bold;">
+    <h1><i class="far fa-trees"></i> Một số giống cùng chủng loại</h1>
+</div>
+<div class="container  same-type-seed row" style="height: auto;">
+    {{#each same}}
+    {{#if (eq this.name ../seed.name)}}
+    {{else}}
+    <div class="col-sm-3">
+        <div class="card card-seed-item shadow d-inline-block" style="height: 90%;">
+            <a href="/seed/{{this._id}}/detail" class="card-img-wrap">
+                <img src={{this.image}} class="card-img-top" alt="...">
+            </a>
+            <div class="card-body">
+                <h5 class="card-title">{{this.name}}</h5>
+                <a href="/seed/{{this._id}}/detail" class="btn btn-success position-absolute bottom-0 start-10"
+                    id="nutbam">Xem chi tiết</a>
+            </div>
+        </div>
+    </div>
+    {{/if}}
+    {{/each}}
+</div>
