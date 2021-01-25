@@ -10,9 +10,9 @@
 <div class="card" id="side-menu-crop" style="width: 18rem;">
        {{#each crop}}
     {{#if (eq this.slug ../seedtype)}}
-  <a href={{this.slug}} class="selected-crop">{{this.type}}</a>
+  <a href="/seed/{{this.slug}}" class="selected-crop">{{this.type}}</a>
     {{else}}
-<a href={{this.slug}} class="not-selected-crop">{{this.type}}</a>
+<a href="/seed/{{this.slug}}" class="not-selected-crop">{{this.type}}</a>
     {{/if}}
     {{/each}}
 </div>
@@ -21,12 +21,12 @@
    {{#each seed}}
      <div class="col-sm-6 col-lg-4  ">
         <div class="card card-seed-item shadow d-inline-block">
-            <a href="#" class="card-img-wrap">
+            <a href="/seed/{{this._id}}/detail" class="card-img-wrap">
              <img src={{this.image}} class="card-img-top" alt="...">
                 </a>
                 <div class="card-body">
                     <h5 class="card-title">{{this.name}}</h5>
-                    <a href="#" class="btn btn-success position-absolute bottom-0 start-10" id="nutbam">Xem chi tiết</a>
+                    <a href="/seed/{{this._id}}/detail" class="btn btn-success position-absolute bottom-0 start-10" id="nutbam">Xem chi tiết</a>
                 </div>
             </div>
          
