@@ -7,10 +7,21 @@ const port = 3001;
 const route = require('./routes');
 const db = require('./config/db');
 const methodOverride = require('method-override');
-
+const session = require('express-session');
 //method override
 app.use(methodOverride('_method'));
-
+app.use(
+    session({
+        resave: true,
+        saveUninitialized: true,
+        secret: 'somesecret',
+        cookie: { maxAge: 6000000 },
+    }),
+);
+app.use(function (req, res, next) {
+    res.locals.session = req.session;
+    next();
+});
 //middleware
 app.use(express.urlencoded());
 app.use(express.json());

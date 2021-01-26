@@ -8,15 +8,7 @@ class SeedControllers {
         Crop.find({}, function (err, crop) {
             if (err) return handleError(err);
             crop = mutipleMongooseToObject(crop);
-            Seed.find({ type: crop[0].slug }, function (err, seed) {
-                if (err) return handleError(err);
-                seed = mutipleMongooseToObject(seed);
-                res.render('seeds/show-list', {
-                    crop,
-                    seed,
-                    seedtype: crop[0].slug,
-                });
-            });
+            res.render('list/list-view-crops', { crop });
         });
     }
     show(req, res, next) {

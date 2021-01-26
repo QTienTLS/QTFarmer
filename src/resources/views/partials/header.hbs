@@ -26,7 +26,7 @@
                   <a class="nav-link active" aria-current="page" href="#footer">LIÊN HỆ</a>
                 </li>
               </ul>
-            <nav class="nav nav-pills nav-justified sign-in-option">
+            <nav class="nav nav-pills nav-justified sign-in-option" id="sign-in-option">
               <a href="/account/register">
                 <button type="button" class="btn btn-light rounded-pill btn-dang-ky">Đăng ký</button>
               </a>
@@ -36,24 +36,26 @@
             </nav>
             </ul>
             </div>
-            {{!-- <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
-              <ul class="navbar-nav ms-auto ">
+            <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+              <ul class="navbar-nav ms-auto  user-panel " style="display:none" id="user-panel">
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button"
                 data-bs-toggle="dropdown" aria-expanded="false">
-                <img src="/img/1.jpg" alt="" class="user-avatar">
-                Quang Tiến
+                <img src={{session.User.img}} alt="" class="user-avatar">
+                {{session.User.display}}
               </a>
               <ul class="dropdown-menu  bg-success">
+                <li><a class="dropdown-item" href="/crops/create"><i class="far fa-tasks"></i> Quản lý website</a></li>
+                <li><a class="dropdown-item" href="/crops/create"><i class="fad fa-user-cog"></i> Thay đổi thông tin</a></li>
                 <li><a class="dropdown-item" href="/crops/create"><i class="fas fa-seedling"></i> Thêm loại cây trồng</a></li>
                 <li><a class="dropdown-item" href="/list/crops"><i class="fas fa-clipboard-list"></i> Danh sách loại cây</a>
                 </li>
                 <div class="dropdown-divider"></div>
-                <li><a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt"></i> Đăng xuất</a></li>
+                <li><a class="dropdown-item" href="/account/logout"><i class="fas fa-sign-out-alt"></i> Đăng xuất</a></li>
               </ul>
             </li>
           </ul>
-        </div> --}}
+        </div>
       </div>
 </div>
 </nav>
