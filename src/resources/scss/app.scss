@@ -123,6 +123,11 @@ h1 {
             width: 130px;
         }
     }
+    .login-help {
+        font-size: 15px;
+        font-style: italic;
+        margin-left: 350px;
+    }
     .btn-dang-nhap {
         background-color: $main-color;
         color: white;
@@ -432,5 +437,90 @@ h1 {
         font-size: 15px;
         font-style: italic;
         margin-left: 350px;
+    }
+}
+#stop-img {
+    position: relative;
+    bottom: -30px;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+#stop-mes {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+.side-menu-admin {
+    display: inline-block;
+    margin-bottom: 100px;
+    margin-left: -200px;
+    margin-top: 140px;
+
+    .card {
+        border-color: $main-color;
+        color: $main-color;
+        border-width: 2px;
+        width: 250px;
+        margin-top: 10px;
+    }
+}
+.admin-panel {
+    width: 90%;
+    height: 65vh;
+    position: relative;
+    left: 15%;
+    top: -400px;
+    z-index: 10;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    a {
+        text-decoration: none;
+    }
+}
+.admin-card {
+    margin-left: 20%;
+    margin-top: 20px;
+    .card-img-wrap {
+        overflow: hidden;
+        position: relative;
+        display: block;
+    }
+    .card-img-wrap:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+    .card-img-wrap:hover:after {
+        opacity: 1;
+    }
+    .card-img-wrap:hover img {
+        background-image: url(src);
+        filter: blur(2px);
+        -webkit-filter: blur(2px);
+        transform: scale(1.2);
+        /* Safari & Google Chrome */
+        -webkit-transform: scale(1.2);
+        /* Mozilla Firefox */
+        -moz-transform: scale(1.2);
+        /* Opera */
+        -o-transform: scale(1.2);
+        /* IE 9 */
+        -ms-transform: scale(1.2);
+        cursor: pointer;
+    }
+    img {
+        width: 100%;
+        transition-duration: 0.5s;
+        /* Safari & Google Chrome */
+        -webkit-transition-duration: 0.5s;
+        /* Mozilla Firefox */
+        -moz-transition-duration: 0.5s;
+        /* Opera */
+        -o-transition-duration: 0.5s;
+        /* IE 9 */
+        -ms-transition-duration: 0.5s;
     }
 }

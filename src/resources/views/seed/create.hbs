@@ -1,0 +1,49 @@
+<div class="mt-4">
+    <h1 style="margin-bottom: 50px; text-align: center;">
+        Thêm mới giống cây
+    </h1>
+    <a href="/admin/seed" class="btn btn-success"><i class="fad fa-arrow-alt-to-left"></i> Quay lại</a>
+    <form method="POST" action="/seed/added">
+        <div class="form-group">
+            <label for="type" class="form-label">Loại cây trồng</label>
+            <select class="form-control" id="type" name="type">
+                {{#each crop}}
+                {{#if (eq this.slug ../selectedCrop)}}
+                <option value={{this.slug}} selected>{{this.type}}</option>
+                {{else}}
+                <option value={{this.slug}}>{{this.type}}</option>
+                {{/if}}
+                {{/each}}
+            </select>
+            <div id="emailHelp" class="form-text">Chọn chủng loại cây</div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="form-group col">
+                <label for="image" class="form-label">Tên giống cây</label>
+                <input type="text" class="form-control" id="name" name="name">
+            </div>
+            <div class="form-group col">
+                <label for="image" class="form-label">Nguồn gốc</label>
+                <textarea class="form-control" name="source" id="source" cols="100" rows="7"
+                    placeholder="Nguồn gốc..."></textarea>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="form-group col">
+                <label for="image" class="form-label">Những đặc tính chủ yếu</label>
+                <textarea class="form-control" name="description" id="description" cols="80" rows="7"
+                    placeholder="Những đặc tính chủ yếu..."></textarea>
+            </div>
+            <div class="form-group col">
+                <label for="image" class="form-label">Hướng dẫn sử dụng và yêu cầu kĩ thuật</label>
+                <textarea class="form-control" name="tips" id="tips" cols="90" rows="7"></textarea>
+            </div>
+        </div>
+        <br>
+
+        {{!-- <button type="submit" class="btn btn-primary">Submit</button> --}}
+        <button type="submit" class="btn btn-success btn-lg">Thêm mới</button>
+    </form>
+</div>

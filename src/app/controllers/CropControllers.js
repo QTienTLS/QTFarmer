@@ -5,9 +5,6 @@ class CropControllers {
     show(req, res) {
         res.send('Crop');
     }
-    create(req, res, next) {
-        res.render('crops/create');
-    }
     added(req, res, next) {
         const crop = new Crop(req.body);
         crop.save()

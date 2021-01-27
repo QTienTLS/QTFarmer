@@ -40,6 +40,37 @@ class SeedControllers {
             //res.json(seed);
         });
     }
+    added(req, res, next) {
+        Crop.findOne({ slug: req.body.type }, function (err, crop) {
+            if (err) return handleError(err);
+            const seed = new Seed(req.body);
+            seed.image = crop.image;
+
+            seed.save(function (err) {
+                var path = '/admin/create-seed/' + seed.type;
+                res.redirect(path);
+            });
+        });
+    }
+    delete(req, res, next) {
+        Seed.deleteOne({ _id: req.params.id })
+            .then(() => res.redirect('back'))
+            .catch(next);
+    }
+    edit(req, res, next) {
+        Seed.findById(req.params.id, function (err, seed) {
+            Crop.find({}, function (err, crop) {
+                seed = mongooseToObject(seed);
+                crop = mutipleMongooseToObject(crop);
+                res.render('seed/edit', { seed, crop });
+            });
+        });
+    }
+    update(req, res, next) {
+        Seed.updateOne({ _id: req.params.id }, req.body)
+            .then(() => res.redirect('/admin/seed'))
+            .catch(next);
+    }
 }
 
 module.exports = new SeedControllers();

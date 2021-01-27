@@ -1,0 +1,10 @@
+const express = require('express');
+const route = express.Router();
+const adminController = require('../app/controllers/AdminControllers');
+route.get('/seed', adminController.seedAdmin);
+route.get('/crop', adminController.cropAdmin);
+route.get('/create-crop', adminController.addCrop);
+route.get('/create-seed/:type', adminController.addSeed);
+route.get('/create-seed', adminController.addSeed);
+route.get('/', adminController.admin);
+module.exports = route;

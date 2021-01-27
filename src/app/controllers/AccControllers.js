@@ -7,7 +7,10 @@ const alert = require('alert');
 var help;
 class AccControllers {
     login(req, res, next) {
-        res.render('account/login');
+        help = {
+            userHelp: 'Tên đăng nhập của bạn',
+        };
+        res.render('account/login', { help });
     }
     register(req, res, next) {
         help = {
@@ -21,13 +24,28 @@ class AccControllers {
         Acc.findOne({ user: req.body.user }, function (err, acc) {
             if (err) handleError(err);
             bodyParser.json();
-            if (req.body.password == acc.password) {
-                req.session.User = {
-                    display: acc.display,
-                    img: acc.avatar,
+            if (acc) {
+                if (req.body.password == acc.password) {
+                    req.session.User = {
+                        display: acc.display,
+                        img: acc.avatar,
+                        key: acc.modder,
+                    };
+                    res.redirect('/');
+                } else {
+                    help = {
+                        userHelp:
+                            'Tên đăng nhập hoặc mật khẩu không đúng ! Vui lòng thử lại',
+                    };
+                    res.render('account/login', { help });
+                }
+            } else {
+                help = {
+                    userHelp:
+                        'Tên đăng nhập hoặc mật khẩu không đúng ! Vui lòng thử lại',
                 };
+                res.render('account/login', { help });
             }
-            res.redirect('/');
         });
         //res.json(req.body);
     }
@@ -42,7 +60,8 @@ class AccControllers {
             if (err) return handleError(err);
             if (acc) {
                 help = {
-                    userHelp: acc.user,
+                    userHelp:
+                        'Tài khoản đã tồn tại ! vui lòng chọn tên đăng nhập khác',
                     passHelp: 'Nhập mật khẩu của bạn',
                     repassHelp: 'Nhập lại mật khẩu của bạn',
                 };
@@ -63,7 +82,11 @@ class AccControllers {
                 const newUser = new Acc(req.body);
                 newUser.save(function (err) {
                     if (err) return handleError(err);
-                    res.redirect('/account/login');
+                    help = {
+                        userHelp:
+                            'Đăng ký thành công ! Vui lòng đăng nhập tài khoản bạn vừa tạo !',
+                    };
+                    res.render('account/login', { help });
                 });
             }
         });

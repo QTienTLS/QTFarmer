@@ -37,6 +37,7 @@ app.engine(
             sum: (a, b) => a + b,
             neq: (a, b) => a != b,
             eq: (a, b) => a == b,
+            get_length: (a) => a.length,
         },
     }),
 );
