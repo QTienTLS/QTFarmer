@@ -17,6 +17,8 @@
     {{/each}}
 </div>
 <div class="container" id="seed-all-page">
+    <h1>Số giống cây: <h1 id="seed-leng">{{seed.length}}</h1>
+    </h1>
     <div class="row">
    {{#each seed}}
      <div class="col-sm-6 col-lg-4  ">
@@ -33,5 +35,17 @@
         </div>
    {{/each}}
    </div>
+<nav aria-label="Page navigation example">
+    <ul class="pagination">
+        <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+        <li class="page-item"><a class="page-link" href="#">1</a></li>
+        <li class="page-item"><a class="page-link" href="?page=2">2</a></li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item"><a class="page-link" href="#">Next</a></li>
+    </ul>
+</nav>
 </div>
-
+<script>
+    var test = document.getElementById("seed-leng");
+    test.innerHTML = Math.floor(test.innerHTML / 9);
+</script>
