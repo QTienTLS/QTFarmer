@@ -2,67 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Các giống cây trồng nông nghiệp</title>
-    <link rel="icon" href="/img/logo-green.png" type="image/icon type">
-    <link rel="stylesheet" href="/css/bootstrap/css/bootstrap.min.css">
-    <!-- Font Awesome JS -->
-    <link rel="stylesheet" type="text/css" href="\css\fontawesome-pro-5.15.1-web\css\all.css">
-    {{!--
-    <link rel="stylesheet" href="/css/fontawesome-free/css/fontawesome.min.css">
-    <link rel="stylesheet" href="/css/fontawesome-free/css/all.min.css"> --}}
-    <link rel="stylesheet" href="/css/app.css">
-    
+    <title>Document</title>
 </head>
-<body onload="checkUser()" style="width: 100vw; margin:0; max-width: 100%;">
-    <div class="app">
-        {{>header}}
-        <div class="container" style="margin-bottom: 50px; ">
-            {{{body}}}
-        <p id="checking" style="color: white;">{{session.User.display}}</p>
-        </div>
-        <a id="back-to-top" href="#" class="btn btn-light btn-lg back-to-top rounded-circle" role="button">
-            <i class="fad fa-chevron-up"></i></a>
-        {{>footer}}
-    </div>
-    <!-- jQuery CDN - Slim version (=without AJAX) -->
-    <script src="/js/jquery/dist/jquery.slim.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="/css/bootstrap/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-    {{!-- nut scroll to top --}}
-    <script>//Get the button
-        var mybutton = document.getElementById("back-to-top");
-
-        // When the user scrolls down 20px from the top of the document, show the button
-        window.onscroll = function () { scrollFunction() };
-
-        function scrollFunction() {
-            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                mybutton.style.display = "inline-block";
-            } else {
-                mybutton.style.display = "none";
-            }
-        }
-
-        // When the user clicks on the button, scroll to the top of the document
-        function topFunction() {
-            document.body.scrollTop = 0;
-            document.documentElement.scrollTop = 0;
-        }
-    </script>
-    <script>
-        var check = document.getElementById("checking");
-        var signin = document.getElementById("sign-in-option");
-        var user = document.getElementById("user-panel");
-        function checkUser() {
-            if (check.innerHTML != '' && check.innerHTML != null) {
-                signin.style.display = "none";
-                user.style.display = "inline";
-            }
-        }
-    </script>
+<body>
+    {{{body}}}
 </body>
 </html>
